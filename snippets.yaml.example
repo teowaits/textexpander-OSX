@@ -1,0 +1,33 @@
+---
+# snippets.yaml.example — copy to snippets.yaml and edit to suit.
+#
+# The daemon reads ~/.config/textexpander/snippets.yaml.
+# This file is committed to the repo as a template; snippets.yaml is gitignored.
+#
+# Rules:
+#   - Always double-quote trigger keys. The !! prefix is a YAML type-tag
+#     character and breaks parsing if unquoted.
+#   - Use | for multi-line expansions (most readable).
+#   - Use >- for long single-paragraph expansions (folds newlines to spaces).
+
+snippets:
+
+  # --- Personal ---
+  "!!em":   "you@example.com"
+  "!!sig": |
+    Best regards,
+    Your Name
+
+  # --- Titles / roles ---
+  "!!de":   "Deputy Editor"
+  "!!eic":  "Editor-in-Chief"
+
+  # --- Journal / product names (examples) ---
+  "!!aidi": "Advanced Intelligent Discovery"
+  "!!aisy": "Advanced Intelligent Systems"
+  "!!as":   "Advanced Science"
+
+  # --- Multi-line example ---
+  "!!4re": >-
+    Advanced Intelligent Discovery is Wiley's gold Open Access journal
+    at the intersection of AI and the natural sciences.

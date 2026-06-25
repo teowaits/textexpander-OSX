@@ -1,0 +1,23 @@
+# --- User data (never commit) ---
+snippets.yaml        # copy snippets.yaml.example → snippets.yaml and edit locally
+
+# --- Runtime files ---
+expander.log
+expander.pid
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# --- Editor ---
+.cursor/
+.vscode/
+*.swp
+start.sh
