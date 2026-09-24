@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/Users/mcavalleri/.config/textexpander/.venv/bin/python
 """
 snip — CLI for managing text expansion snippets.
 
@@ -48,8 +48,9 @@ def load_yaml():
 def save_yaml(data):
     os.makedirs(CONFIG_DIR, exist_ok=True)
     with open(CONFIG_PATH, "w") as f:
+        yaml.add_representer(str, lambda d, s: d.represent_scalar("tag:yaml.org,2002:str", s, style="|" if "\n" in s else None))
         yaml.dump(data, f, default_flow_style=False,
-                  allow_unicode=True, sort_keys=True)
+                  allow_unicode=True, sort_keys=True, width=float("inf"))
 
 
 # ── Daemon helpers ─────────────────────────────────────────────────────────────
