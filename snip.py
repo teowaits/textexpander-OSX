@@ -1,4 +1,4 @@
-#!/Users/mcavalleri/.config/textexpander/.venv/bin/python
+#!/usr/bin/env python3
 """
 snip — CLI for managing text expansion snippets.
 
